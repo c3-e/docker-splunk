@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Action Profiler</title>
+    <link rel="shortcut icon"
+        href="/en-US/static/@04CE31C4F32680B22CEE37EDB7B0B2E6A6799DBD79999D030455EE86D822C5CF/img/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="{{SPLUNKWEB_URL_PREFIX}}/static/build/css/bootstrap-enterprise.css"/>
+    <link rel="stylesheet" type="text/css"
+        href="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/css/search-bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+        href="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/splunkjs/css/dashboard.css"/>
+    <link rel="stylesheet" type="text/css"
+        href="{{SPLUNKWEB_URL_PREFIX}}/static/css/build/pages/dashboard-simple-bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css"
+        href="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/css/custom.css"/>
+
+</head>
+<body class="simplexml preload locale-en" data-splunk-version="6.5.2" data-splunk-product="enterprise">
+<!-- 
+BEGIN LAYOUT
+This section contains the layout for the dashboard. Splunk uses proprietary
+styles in <div> tags, similar to Bootstrap's grid system. 
+-->
+<header>
+    <a class="navSkip" href="#navSkip" tabindex="1">Screen reader users, click here to skip the navigation bar</a>
+    <div class="header splunk-header">
+        <div id="placeholder-splunk-bar">
+            <a href="{{SPLUNKWEB_URL_PREFIX}}/app/launcher/home" class="brand" title="splunk &gt; listen to your data">splunk<strong>&gt;</strong></a>
+        </div>
+        <div id="placeholder-app-bar"></div>
+    </div>
+    <a id="navSkip"></a>
+</header>
+
+<div class="dashboard-body container-fluid main-section-body" data-role="main">
+    <div id="search-header" class="section-padded section-header">
+        <div class="search-bar-wrapper shared-searchbar">
+            <form method="get" action="" class="search-form">
+                <table class="search-bar search-bar-primary">
+                    <tbody>
+                    <tr>
+                        <td class="search-input" width="100%">
+                            <div id="search" data-cid="view4885" class="shared-searchbar-input"
+                                 data-view="views/shared/searchbar/Input" data-render-time="0">
+                                <div class="search-field-background">
+                                </div>
+                                <div class="search-field-wrapper">
+                                    <textarea rows="1" name="search" spellcheck="false" class="search-field"
+                                              placeholder="search" id="212426.34197697043" autocorrect="off"
+                                              autocapitalize="off" value=""
+                                              style="height: 29px; overflow: hidden;"></textarea>
+                                    <div class="shadowTextarea"
+                                         style="position: absolute; left: -9999px; top: -9999px; margin-right: -3000px; padding: 4px 6px; font-size: 12px; line-height: 20px; font-family: 'Droid Sans Mono', Consolas, Monaco, 'Courier New', Courier, monospace; font-weight: 400; word-wrap: break-word; white-space: pre-wrap; border-width: 1px; border-color: rgb(78, 128, 42) rgb(66, 109, 36) rgb(50, 82, 27); border-style: solid; box-sizing: border-box; width: 1233px;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-assistant-wrapper" style="margin-left: 4px; display: none;">
+                                <a href="#" class="search-assistant-activator icon-triangle-down-small"></a>
+                            </div>
+                        </td>
+                        <td class="search-kind">
+                            <div class="btn-group dropdown">
+                                <input type="hidden" name="kind"/>
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownSearchKind"
+                                   href="#"><span>Interesting Actions</span><i class="caret"></i></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownSearchKind">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="*interesting*"
+                                                               class="dropdown-default" href="#">Interesting Actions</a>
+                                    </li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="rootReq"
+                                                               href="#">Root Actions</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="*all*"
+                                                               href="#">All Actions</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="search-group">
+                            <div class="btn-group dropdown">
+                                <input type="hidden" name="profiler-group"/>
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownSearchGroup" href="#"><span>by Type/Action</span><i
+                                        class="caret"></i></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownSearchGroup">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                               data-value="t_type, t_action, a_st"
+                                                               class="dropdown-default" href="#">by Type/Action</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="t_action, a_st"
+                                                               href="#">by Action Name</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="-" href="#">Individual
+                                        Actions</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="search-timerange">
+                            <div id="search-timerange" class="btn"></div>
+                        </td>
+                        <td class="search-aggregate">
+                            <div class="btn-group dropdown">
+                                <input type="hidden" name="aggregate"/>
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownSearchAggregate"
+                                   href="#"><span>Sum &amp; Mean</span> Times<i class="caret"></i></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownSearchAggregate">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="sum" href="#">Sum</a>
+                                    </li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="avg" href="#">Mean</a>
+                                    </li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="sum avg"
+                                                               class="dropdown-default" href="#">Sum &amp; Mean</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="median"
+                                                               href="#">Median</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="max" href="#">Maximum</a>
+                                    </li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="p75" href="#">Third
+                                        Quartile</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="p90" href="#">90th
+                                        Percentile</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="search-format">
+                            <div class="btn-group dropdown">
+                                <input type="hidden" name="format"/>
+                                <a class="btn dropdown-toggle" data-toggle="dropdown" id="dropdownSearchFormat"
+                                   href="#">Format <span>Time</span><i class="caret"></i></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownSearchFormat">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="time"
+                                                               class="dropdown-default" href="#">Time</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="time_millis"
+                                                               href="#">Time w/ MS</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="seconds"
+                                                               href="#">Seconds</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="seconds_millis"
+                                                               href="#">Seconds w/ MS</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" data-value="millis"
+                                                               href="#">Milliseconds</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td class="search-button">
+                            <div data-cid="view65350" class="shared-searchbar-submit"
+                                 data-view="views/shared/searchbar/Submit" data-render-time="0.001">
+                                <a class="btn" href="#"><i class="icon-search-thin"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="actions-controls">
+
+    </div>
+
+    <div id="actions-table"></div>
+
+    <br clear="all"/>
+    <div id="profile-title" class="section-padded section-header">
+        <h2 class="search-name section-title">
+            <div class="icon-flip-y"><i class="icon-share"></i></div>
+            Callees List
+        </h2>
+    </div>
+    <div id="profile-controls" class="splunk-searchcontrols">
+        <div class="summary shared-jobstatus" style="display: none;">
+            <div class="pull-left status shared-jobstatus-count">
+                <span class="search-count"></span>
+                <span class="profile-message"></span>
+                <span class="search-progress"></span>
+            </div>
+            <div class="btn-group pull-right">
+                <a class="btn btn-small query" title="show query details" href="#"><i class="icon-search"></i> Query</a>
+                <a class="btn btn-small export" title="export visible rows as CSV" href="#"><i class="icon-report"></i>
+                    Export</a>
+            </div>
+        </div>
+    </div>
+    <div id="action-profile">
+        <div class="splunk-message-container placeholder">
+            <div class="alert alert-info"><i class="icon-alert"></i>Choose one of the results above to profile.</div>
+        </div>
+        <table id="profile-table" class="table table-chrome table-striped">
+            <thead class="shared-resultstable-resultstableheader"></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="search-assistant" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><i class="icon-distributed-environment"></i> Clusters active in last 4h</h4>
+                </div>
+                <div class="search-assistant-container modal-body">
+                    <div id="search-assistant-controls"></div>
+                    <br/>
+                    <table class="hosts">
+                        <thead>
+                        <tr>
+                            <th class="name">Name</th>
+                            <th class="hosts">Hosts</th>
+                            <th class="events">Events</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="pull-left">
+                        <input type="checkbox" name="roles" style="vertical-align: baseline"/> Show Roles
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="query-dialog" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><i class="icon-search"></i> <span class="which">Current</span> Query</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="final">Generated search:</label>
+                    <textarea name="final" rows="5"></textarea>
+                    <div class="links">
+                        <span>Current Time Range:&nbsp;</span>
+                        <div class="btn-group">
+                            <a class="btn new-tab current" title="current view in new tab (same settings)" href="#"><i
+                                    class="icon-plus"></i> Link</a>
+                            <a class="btn copy current" title="copy URL to clipboard (same settings)" href="#"><i
+                                    class="icon-clipboard"></i> Copy</a>
+                        </div>
+                        <span>&nbsp;&nbsp;Stable Range:&nbsp;</span>
+                        <div class="btn-group">
+                            <a class="btn new-tab stable" title="current view in new tab (fixed time range)" href="#"><i
+                                    class="icon-plus"></i> Link</a>
+                            <a class="btn copy stable" title="copy URL to clipboard (fixed time range)" href="#"><i
+                                    class="icon-clipboard"></i> Copy</a>
+                        </div>
+                    </div>
+                    <label for="splunk">Complete Splunk query:</label>
+                    <textarea name="splunk" rows="10"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 
+END LAYOUT
+-->
+
+<script src="{{SPLUNKWEB_URL_PREFIX}}/config?autoload=1"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/i18ncatalog?autoload=1"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/build/simplexml/index.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/js/bootstrap.min.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/js/moment.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/format.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/export.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/context.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/customize.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/query.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/searchbar.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/searchassistant.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/fields.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/prof_fields.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/prof_query.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/profiler.js"></script>
+<script type="text/javascript">
+  require.config({
+    baseUrl: "{{SPLUNKWEB_URL_PREFIX}}/static/js",
+    waitSeconds: 0 // Disable require.js load timeout
+  });
+
+  // <![CDATA[
+  // <![CDATA[
+  //
+  // LIBRARY REQUIREMENTS
+  //
+  // In the require function, we include the necessary libraries and modules for
+  // the HTML dashboard. Then, we pass variable names for these libraries and
+  // modules as function parameters, in order.
+  //
+  // When you add libraries or modules, remember to retain this mapping order
+  // between the library or module and its function parameter. You can do this by
+  // adding to the end of these lists, as shown in the commented examples below.
+
+  require([
+    "splunkjs/mvc",
+    "splunkjs/mvc/utils",
+    "splunkjs/mvc/tokenutils",
+    "underscore",
+    "jquery",
+    "splunkjs/mvc/simplexml",
+    "splunkjs/mvc/layoutview",
+    "splunkjs/mvc/simplexml/dashboardview",
+    "splunkjs/mvc/simplexml/dashboard/panelref",
+    "splunkjs/mvc/simplexml/element/chart",
+    "splunkjs/mvc/simplexml/element/event",
+    "splunkjs/mvc/simplexml/element/html",
+    "splunkjs/mvc/simplexml/element/list",
+    "splunkjs/mvc/simplexml/element/map",
+    "splunkjs/mvc/simplexml/element/single",
+    "splunkjs/mvc/simplexml/element/table",
+    "splunkjs/mvc/simplexml/element/visualization",
+    "splunkjs/mvc/simpleform/formutils",
+    "splunkjs/mvc/simplexml/eventhandler",
+    "splunkjs/mvc/simplexml/searcheventhandler",
+    "splunkjs/mvc/simpleform/input/dropdown",
+    "splunkjs/mvc/simpleform/input/radiogroup",
+    "splunkjs/mvc/simpleform/input/linklist",
+    "splunkjs/mvc/simpleform/input/multiselect",
+    "splunkjs/mvc/simpleform/input/checkboxgroup",
+    "splunkjs/mvc/simpleform/input/text",
+    "splunkjs/mvc/simpleform/input/submit",
+    "splunkjs/mvc/timerangeview",
+    "splunkjs/mvc/searchmanager",
+    "splunkjs/mvc/savedsearchmanager",
+    "splunkjs/mvc/postprocessmanager",
+    "splunkjs/mvc/simplexml/urltokenmodel",
+    "splunkjs/mvc/searchcontrolsview",
+    "splunkjs/mvc/tableview",
+    "splunkjs/ready!",
+    "jquery.cookie",
+    "moment"
+    // Add comma-separated libraries and modules manually here, for example:
+    // ..."splunkjs/mvc/simplexml/urltokenmodel",
+    // "splunkjs/mvc/tokenforwarder"
+  ],
+  function (
+    mvc,
+    utils,
+    TokenUtils,
+    _,
+    $,
+    DashboardController,
+    LayoutView,
+    Dashboard,
+    PanelRef,
+    ChartElement,
+    EventElement,
+    HtmlElement,
+    ListElement,
+    MapElement,
+    SingleElement,
+    TableElement,
+    VisualizationElement,
+    FormUtils,
+    EventHandler,
+    SearchEventHandler,
+    DropdownInput,
+    RadioGroupInput,
+    LinkListInput,
+    MultiSelectInput,
+    CheckboxGroupInput,
+    TextInput,
+    SubmitButton,
+    TimeRangeView,
+    SearchManager,
+    SavedSearchManager,
+    PostProcessManager,
+    UrlTokenModel,
+    SearchControlsView,
+    TableView
+
+    // Add comma-separated parameter names here, for example:
+    // ...UrlTokenModel,
+    // TokenForwarder
+  ) {
+
+    var pageLoading = true;
+
+
+    //
+    // TOKENS
+    //
+
+    // Create token namespaces
+    var urlTokenModel = new UrlTokenModel();
+    mvc.Components.registerInstance('url', urlTokenModel);
+    var defaultTokenModel = mvc.Components.getInstance('default', { create: true });
+    var submittedTokenModel = mvc.Components.getInstance('submitted', { create: true });
+
+    urlTokenModel.on('url:navigate', function () {
+      defaultTokenModel.set(urlTokenModel.toJSON());
+      if (!_.isEmpty(urlTokenModel.toJSON()) && !_.all(urlTokenModel.toJSON(), _.isUndefined)) {
+        submitTokens();
+      } else {
+        submittedTokenModel.clear();
+      }
+    });
+
+    // Initialize tokens
+    defaultTokenModel.set(urlTokenModel.toJSON());
+
+    function submitTokens() {
+      // Copy the contents of the defaultTokenModel to the submittedTokenModel and urlTokenModel
+      FormUtils.submitForm({ replaceState: pageLoading });
+    }
+
+    function setToken(name, value) {
+      defaultTokenModel.set(name, value);
+      submittedTokenModel.set(name, value);
+    }
+
+    function unsetToken(name) {
+      defaultTokenModel.unset(name);
+      submittedTokenModel.unset(name);
+    }
+
+    //
+    // SEARCH CONTROL
+    //
+    new SearchControlsView({
+      id: "actions-controls",
+      managerid: "search-actions",
+      el: $("#actions-controls")
+    }).render();
+
+    //
+    // TABLE
+    //
+    new TableView({
+      id: "actions-table",
+      managerid: "search-actions",
+      pageSize: "12",
+      drilldownRedirect: false,
+      el: $("#actions-table")
+    }).render();
+
+    //
+    // SEARCH MANAGERS
+    //
+    new SearchManager({
+      id: "host-list",
+      app: utils.getCurrentApp(),
+      autostart: false,
+      cache: true,
+      preview: true,
+      earliest_time: "-4h",
+      search: "a_t | stats count by host | sort by -count"
+    });
+
+    new SearchManager({
+      id: "search-actions",
+      app: utils.getCurrentApp(),
+      autostart: false,
+      cache: false,
+      preview: true,
+      earliest_time: "-4h",
+      search: mvc.tokenSafe("$action_query$")
+    });
+
+    new TimeRangeView({
+      id: "actions-timerange",
+      managerid: "search-actions",
+      preset: "Last 60 minutes",
+      earliest_time: mvc.tokenSafe("$earliest$"),
+      latest_time: mvc.tokenSafe("$latest$"),
+      el: $("#search-timerange")
+    }).render();
+
+
+    //
+    // SPLUNK LAYOUT
+    //
+
+    $('header').remove();
+    new LayoutView({ "hideFooter": false, "hideChrome": false, "hideSplunkBar": false, "hideAppBar": false })
+      .render()
+      .getContainerElement()
+      .appendChild($('.dashboard-body')[0]);
+
+    //
+    // DASHBOARD EDITOR
+    //
+
+    new Dashboard({
+      id: 'dashboard',
+      el: $('.dashboard-body'),
+      showTitle: true,
+      editable: true
+    }, { tokens: true }).render();
+
+
+    //
+    // VIEWS: VISUALIZATION ELEMENTS
+    //
+
+    submitTokens();
+
+
+    //
+    // DASHBOARD READY
+    //
+
+    DashboardController.ready();
+    pageLoading = false;
+
+  }
+);
+// ]]>
+</script>
+
+<link rel="stylesheet" type="text/css" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/css/bootstrap-enterprise.css"/>
+<link rel="stylesheet" type="text/css" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/c3-monitor/css/custom.css"/>
+</body>
+</html>

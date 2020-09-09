@@ -1,0 +1,1780 @@
+/*  Splunk: Variables */
+/*  ================================================== */
+/*  Variables to customize the look and feel of Bootstrap (splunk version) */
+
+
+/*  STATIC PATHS */
+/*  ------------------------- */
+
+
+/*  COLOR PALETTE */
+/*  ------------------------- */
+
+/*  Enterprise */
+
+/*  Light */
+
+/*  Grayscale - DO NOT USE DIRECTLY WHENEVER POSSIBLE!!! Use text, border or table variables instead. */
+
+/*  Accent colors */ /* sky */
+
+
+/*  TYPOGRAPHY */
+/*  ------------------------- */ /*  18px; */ /*  Lite listing pages */ /*  empty to use BS default, $baseFontFamily */    /*  instead of browser default, bold */ /*  empty to use BS default, $textColor */ /*  #08c; */
+
+
+/*  SCAFFOLDING */
+/*  ------------------------- */ /*  aliases: $tableBorderColor $tableBorderColorVertical */
+/*  also see: $interactiveBorderColor */      /* For containers without a wrapper */  /* For for containers with a wrapper, like popdown */ /*  44px */  /*  26px  */   /*  22px */
+
+
+/*  Horizontal forms & lists */
+/*  ------------------------- */
+
+
+/*  Z-INDEX */
+/*  ------------------------- */
+/*  If a variable does not suit your purpose, set a value relatively such as, $zindexModal +1 */ /*  Splunk Lite */ /*  Splunk Lite */ /*  Sidebar Component */ /*  Sidebar Component */ /*  timerange popdown needs to be above modal + backdrop */ /*  top interactive element */ /*  top interactive element */ /*  top uninteractive */ /*  top uninteractive */
+
+
+/*  TABLES */
+/*  ------------------------- */ /*  overall background-color */ /*  for hover */ /*  for striping */ /*  for striping */ /*  table and cell border */ /*  table and cell border */ /*  table and cell border */
+
+
+
+
+/*  FORMS */
+/*  ------------------------- */ /*  base line-height + 8px vertical padding + 2px top/bottom border */ /*  This is generally overridden. */
+
+/*  BASE INTERACTIVE */
+/*  -------------------------- */
+/*  text */
+/*  background */
+/*  borders */
+/*  shadow */ /*  Active state in Radio Button Control */
+
+
+/*  BASE INTERACTIVE ERROR */
+/*  -------------------------- */
+/*  text */
+/*  background */
+/*  borders */
+
+
+/*  PRIMARY BUTTONS */
+/*  -------------------------- */
+/*  text */
+/*  background */
+/*  borders */
+/*  shadow */
+
+
+/*  PILL BUTTONS */
+/*  -------------------------- */
+/*  text */
+/*  background */
+
+
+
+/*  BUTTONS */
+/*  ------------------------- */
+/*  Used in non-standard buttons - Legacy Bootstrap classes only */
+
+
+
+/*  COMPONENT VARIABLES */
+/*  -------------------------------------------------- */
+
+
+/*  Navbar */
+/*  ------------------------- */ /* Fixes issue for escaped Dashboards. */
+
+/*  Inverted navbar */
+
+
+/*  Tooltips and popovers */
+/*  ------------------------- */
+
+/*  GRID */
+/*  -------------------------- */
+/*  Default 940px grid */
+
+/*  1200px min */
+
+/*  768px-979px */
+
+
+/*  Fluid grid */
+/*  ------------------------- */
+
+/*  1200px min */
+
+/*  768px-979px */
+
+
+/*  Responsive Variables */
+
+
+/*  SELECTORS FOR CUSTOMIZING SPECIFIC LOCALES */
+/*  -------------------------- */
+
+
+/*  BUILD COMMENT */
+/*  -------------------------- */
+/*  Hide the Build Comment. The make file sets this to true. */
+
+/*  LEGACY BUILD */
+/*  -------------------------- */
+/*  This is set to true when building the less for splunk components. */
+/*  Splunk: Mixins */
+/*  ================== */
+/*  Snippets of reusable CSS to develop faster and keep code readable */
+
+/*  Splunk: Mixins */
+/*  ================== */
+/*  Snippets of reusable CSS to develop faster and keep code readable */
+
+
+/*  Mixins */
+/*  -------------------------------------------------- */
+
+
+/*  UTILITY MIXINS */
+/*  -------------------------------------------------- */
+
+/*  Link */
+/*  ------------------ */
+
+
+/*  Clearfix */
+/*  -------- */
+/*  For clearing floats like a boss h5bp.com/q */
+
+/*  Webkit-style focus */
+/*  ------------------ */
+
+/*  Center-align a block level element */
+/*  ---------------------------------- */
+
+/*  Sizing shortcuts */
+/*  ------------------------- */
+
+/*  Placeholder text */
+/*  ------------------------- */
+
+/*  Text overflow */
+/*  ------------------------- */
+/*  Requires inline-block or block for proper styling */
+
+/*  CSS image replacement */
+/*  ------------------------- */
+/*  Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757 */
+
+
+/*  FONTS */
+/*  -------------------------------------------------- */
+
+
+/*  FORMS */
+/*  -------------------------------------------------- */
+
+/*  Block level inputs */
+
+/*  Mixin for form field states */
+
+
+/*  CSS3 PROPERTIES */
+/*  -------------------------------------------------- */
+
+
+/*  Single Side Border Radius */
+
+
+/*  Transformations */
+
+
+
+/*  Resize anything */
+
+/*  CSS3 Content Columns */
+
+/*  Optional hyphenation */
+
+
+
+
+/*  BACKGROUNDS */
+/*  -------------------------------------------------- */
+
+/*  Gradient Bar Colors for buttons and alerts */
+
+/*  Gradients */
+
+/*  Reset filters for IE */
+
+
+
+/*  COMPONENT MIXINS */
+/*  -------------------------------------------------- */
+
+/*  Horizontal dividers */
+/*  ------------------------- */
+/*  Dividers (basically an hr) within dropdowns and nav lists */
+
+/*  Button backgrounds */
+/*  ------------------ */
+
+/*  Navbar vertical align */
+/*  ------------------------- */
+/*  Vertically center elements in the navbar. */
+/*  Example: an element has a height of 30px, so write out `.navbarVerticalAlign(30px);` to calculate the appropriate top margin. */
+
+
+
+/*  Disable highlighting text */
+/*  ------------------------- */
+
+/*  Printing */
+/*  ------------------ */
+
+
+/*  Popdown */
+/*  ------------------ *//*  .popdown-dialog */
+
+/*  popdown body */
+
+
+
+/* Flex
+/*  ------------- */
+
+/*  Full Page Layout */
+/*  ------------- */
+
+
+
+
+/*  Grid System */
+/*  ----------- */
+
+/*  Centered container element */
+
+/*  Table columns */
+
+/*  Make a Grid */
+/*  Use .makeRow and .makeColumn to assign semantic layouts grid system behavior */
+
+/*  The Grid */
+
+/*  Interactive */
+/*  -------------------------------------------------- */
+/*  These are by any element that can be clicked, such as buttons, menus and table headings. */
+
+/*  Hover state */
+
+/*  Interactive Error */
+/*  These are by any interactive element that is is in an error state */
+
+
+/*  primary */
+
+/*  primary hover state */
+
+/* Overlays (Modal, Popdown, Search Assistant) */
+
+
+/*  Focus States */
+/*  ----------------------------- */
+
+/*  Text entry boxes change their border color and glow */
+
+/*  Clickable buttons change their border color and glow */
+
+/*  Block elements change the background color */
+/*  Block elements change the background color and spread via box-shadow */
+
+/*  Docking Elements */
+/*  ------------------ */
+
+/*  Webkit-style focus */
+/*  ------------------ */
+
+/*  Draggable Handle */
+/*  Splunk: Page: Dashboard Simple */
+/*  ============================= */
+/*  FIXME: split this into more components */
+
+/*  fix z-index for map controls */
+
+.leaflet-container {
+  z-index: 1;
+}
+
+.dashboard-wrapper {
+  padding-top: 20px;
+}
+
+.dashboard-body {
+  padding: 0 20px 15px 20px;
+
+    color:#333;
+    background-color: #eee;
+    min-height: 500px;
+    /*  using three color so we can set color stop even though its only 2 colors */
+}
+
+.preload .dashboard-row, .preload .fieldset, .preload .preload-hidden {
+  display: none;
+}
+
+.preload .dashboard-header:after {
+  content: "Loading...";
+  margin: auto;
+  padding: 50px 0;
+}
+
+.progress-bar {
+    top:0;
+    bottom: auto;
+}
+
+.dashboard-header {
+  margin-bottom: 10px;
+  padding-top: 10px;
+
+  /* .dashboard-view-controls { */
+  /*   > a:first-child { */
+  /*     margin-right: 10px; */
+}
+
+.dashboard-header h2 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  padding-left: 0;
+}
+
+.dashboard-header .untitled {
+  font-style: italic;
+}
+
+.dashboard-header .edit-dashboard-menu {
+  padding: 2px 0px 0px 20px;
+}
+
+.dashboard-header .edit-dashboard-menu .dashboard-source-type {
+  color: #999;
+  float: right;
+}
+
+.dashboard-header .edit-dashboard-menu .tooltip-inner {
+  white-space: normal;
+}
+
+.dashboard-header p.description {
+  margin: 0 200px 0 0;
+}
+
+/* } */
+
+.dashboard-header .edit-done {
+  margin-left: 10px;
+}
+
+/*   } */
+
+.dashboard-header .dashboard-menu .edit-btn {
+  margin-right: 5px;
+}
+
+.dashboard-header .dashboard-menu .edit-export {
+  margin-right: 5px;
+}
+
+.dashboard-header .dashboard-menu .edit-other {
+  /*  TODO: replace with icon */
+  font-size: 18px;
+}
+
+.alert-box {
+    padding: 14px;
+    padding-left: 45px;
+    position: relative;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    z-index: 10;
+}
+
+.alert-box i {
+  left: 20px;
+}
+
+.dashboard-error .alert {
+  padding: 14px;
+  padding-left: 45px;
+  position: relative;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  z-index: 10;
+  margin: 100px 50px;
+}
+
+.dashboard-error .alert i {
+  left: 20px;
+}
+.empty-dashboard {
+  padding: 100px 50px;
+}
+.empty-dashboard .alert {
+  padding: 14px;
+  padding-left: 45px;
+  position: relative;
+  line-height: 1.2;
+  margin-bottom: 5px;
+  z-index: 10;
+}
+.empty-dashboard .alert i {
+  left: 20px;
+}
+
+#dashboard-editor{
+  width:100%;
+  min-height: 500px;
+  height:100%;
+}
+
+
+.add-content-master {
+  width: 300px;
+}
+
+
+.add-content-master .header input {
+  border-radius: 15px;
+}
+
+
+.add-content-master .header .clear-filter {
+  position: relative;
+  left: -20px;
+  background-color: #ccc;
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  color: inherit;
+}
+
+
+.add-content-master .header .clear-filter i {
+  font-size: 8px;
+  position: relative;
+  top: -4px;
+  left: 2px;
+}
+
+
+.add-content-master .panel-contents {
+  width: 100%;
+  display: inline-block;
+  overflow-y: auto;
+  position: absolute;
+  top: 65px;
+  bottom: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.add-content-master .panel-contents .accordion-group {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-radius: 0;
+  margin: 0;
+}
+
+
+.add-content-master .panel-contents .accordion-group .collapse:not(.in) {
+  visibility: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.add-content-master .panel-contents .accordion-group .collapse.in {
+  visibility: visible;
+}
+
+
+.add-content-master .panel-contents .accordion-group .accordion-toggle:before {
+  content: "\2C5";
+  font-family: "Splunk Icons";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  display: inline-block;
+  width: 13px;
+}
+
+
+.add-content-master .panel-contents .accordion-group .accordion-toggle.collapsed:before {
+  content: "\203A";
+}
+
+
+.add-content-master .panel-contents .accordion-group .accordion-inner {
+  border-top: none;
+  padding: 0;
+}
+
+
+.add-content-master .panel-contents a:hover {
+  text-decoration: none;
+  color: #3863a0;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+
+.add-content-master .panel-contents a:focus {
+  outline: 0;
+  text-decoration: none;
+  background: rgba(61, 171, 255, 0.12);
+  box-shadow: none;
+  /* override default focus-link() */
+}
+
+
+.add-content-master .panel-contents ul {
+  margin: 0;
+  list-style: none;
+}
+
+
+.add-content-master .panel-contents ul li.panel-content {
+  position: relative;
+}
+
+
+.add-content-master .panel-contents ul li.panel-content a {
+  position: relative;
+  padding: 7px 10px 7px 31px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 16px;
+  display: block;
+  white-space: nowrap;
+}
+
+
+.add-content-master .panel-contents ul li.panel-content a .icons {
+  position: relative;
+  top: 2px;
+  font-size: 14px;
+  width: 40px;
+  text-align: center;
+  margin-left: -15px;
+  display: inline-block;
+}
+
+
+.add-content-master .panel-contents ul li.panel-content a .icons i {
+  margin-right: 3px;
+}
+
+
+.add-content-master .panel-contents ul li.panel-content a .icons i.icon-plus {
+  font-size: 12px;
+}
+
+
+.add-content-master .panel-contents ul li.panel-content .accordion-group ul a {
+  padding-left: 48px;
+}
+
+
+.add-content-master .panel-contents ul li.parser-error a, .add-content-master .panel-contents ul li.clone-error a {
+  color: #999;
+  cursor: default;
+}
+
+
+.add-content-master .panel-contents ul li.selected a {
+  color: #fff;
+  background: #3863a0;
+}
+
+.add-content-name.tooltip {
+  word-break: break-all;
+}
+
+.sidebar .header {
+  padding: 10px;
+  height: 45px;
+  background-color: #eee;
+}
+
+.sidebar .header h3 {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.sidebar .footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.sidebar .content-title-control {
+  margin-top: 10px;
+}
+
+.sidebar .shared-timerangepicker .btn .time-label {
+  display: inline;
+  vertical-align: baseline;
+}
+
+.sidebar .time-range-scope {
+  margin-bottom: 0;
+}
+
+.sidebar .time-range-scope .controls {
+  float: left;
+  margin-right: 10px;
+}
+
+.sidebar .preview-body .dashboard-cell {
+  width: 100%;
+}
+
+.sidebar .preview-body .dashboard-cell .dashboard-panel {
+  margin-right: 0;
+}
+
+.sidebar .preview-body .shared-controls-textareacontrol textarea {
+  height: 80px;
+}
+
+.sidebar .preview-body .view-results {
+  visibility: hidden;
+}
+
+.time-range-scope .controls {
+  margin-bottom: 10px;
+}
+
+.input.hidden {
+  display: none;
+}
+
+.edit-mode .input.hidden {
+  display: inline-block;
+}
+
+.form-settings {
+  float: right;
+}
+
+.edit-mode .dashboard-header .title-editor {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  line-height:normal;
+}
+
+.edit-mode .dashboard-header .title-editor:hover,.edit-mode .dashboard-header .title-editor:focus{
+  background-color: #fff;
+}
+
+.edit-mode .dashboard-header .label-editor {
+  font-size: 24px;
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+.edit-mode .dashboard-header .description-editor {
+  height: 26px;
+  word-break: break-all;
+}
+
+
+.edit-mode .title-editor {
+  box-shadow: none;
+  box-sizing: border-box;
+  height: auto;
+  border-color: transparent;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+.edit-mode .title-editor:hover:not(:focus) {
+  border-color: #ccc;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+
+.edit-mode .title-editor:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  border-collapse: separate;
+  /* Fix IE9 Issue with box-shadow */
+  box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+.edit-mode .dashboard-row .dashboard-panel h2.panel-title {
+  padding: 3px 55px 3px 5px;
+  padding-right: 50px;
+  height: 27px;
+  border-bottom: 1px solid #eee;
+}
+
+.edit-mode .dashboard-row .dashboard-panel h2.panel-title > .title-editor {
+  font-size: inherit;
+  color:inherit;
+  text-transform: inherit;
+  margin-bottom: 5px;
+  padding: 4px 6px 4px 6px;
+  width: 100%;
+  margin-right: 60px;
+  border-color: transparent;
+}
+
+.edit-mode .dashboard-row .dashboard-panel h2.panel-title > .title-editor:hover:not(:focus) {
+  border-color: #ccc;
+}
+
+.edit-mode .dashboard-row .dashboard-panel h2.panel-title > .title-editor:focus {
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  border-collapse: separate;
+  /* Fix IE9 Issue with box-shadow */
+  box-shadow: 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+.edit-mode .dashboard-row .dashboard-panel .panel-head > h3 {
+  padding: 2px 0 2px 5px;
+  margin-right: 177px;
+}
+
+.edit-mode .dashboard-row .dashboard-panel .panel-head > h3 > .title-editor {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  width: 100%;
+  margin-right: 150px;
+}
+
+.edit-mode .dashboard-row .dashboard-panel .dashboard-element-editor {
+  position: relative;
+}
+
+.edit-mode .dashboard-row .dashboard-panel .panel-element-row {
+  border-top: 1px solid #eee !important;
+}
+
+.edit-mode .dashboard-row .dashboard-panel .dashboard-panel-editor {
+  position: absolute;
+  right: 0;
+  top: 16px;
+}
+
+.edit-mode .dashboard-row .dashboard-panel .dashboard-panel-editor .dropdown-toggle {
+  border-radius: 0;
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 27px;
+  box-shadow: none !important;
+}
+
+.edit-mode .dashboard-row .dashboard-panel .dashboard-panel-editor .dropdown-toggle > [class^="icon-"] {
+  font-size: 1.5em;
+}
+
+.edit-mode .dashboard-row .dashboard-panel .dashboard-panel-editor .dropdown-toggle .caret {
+  padding-left: 0.15em;
+  vertical-align:middle;
+}
+
+.edit-mode .dashboard-row .dashboard-panel .dashboard-panel-editor .panel-type-label {
+  padding: 3px 10px;
+  color: #999;
+  text-transform: uppercase;
+}
+
+.view-mode .dashboard-panel h2.panel-title.empty {
+  display: none;
+}
+.view-mode .dashboard-element.table {
+  margin-top: -1px;
+}
+
+.edit-mode .dashboard-row {
+  margin-right: -10px;
+}
+
+.dashboard-row:before,
+    .dashboard-row:after {
+  display: table;
+  content: "";
+  /*  Fixes Opera/contenteditable bug: */
+  /*  http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952 */
+  line-height: 0;
+}
+
+.dashboard-row:after {
+  clear: both;
+}
+
+.dashboard-row .dashboard-cell {
+  float: left;
+}
+
+.dashboard-row .dashboard-panel {
+  background: white;
+  margin: 0 5px 5px 0;
+  /*  overflow: hidden; // moved overflow to panel-body due to SPL-71571 */
+  position: relative;
+}
+
+.dashboard-row .dashboard-panel:before,
+    .dashboard-row .dashboard-panel:after {
+  display: table;
+  content: "";
+  /*  Fixes Opera/contenteditable bug: */
+  /*  http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952 */
+  line-height: 0;
+}
+
+.dashboard-row .dashboard-panel:after {
+  clear: both;
+}
+
+.dashboard-row .dashboard-panel h2.panel-title {
+  font-size: 16px;
+  line-height: 1;
+  font-weight:normal;
+  margin: 0;
+  padding: 12px 55px 7px 12px;
+  word-wrap: break-word;
+  text-rendering: initial;
+}
+
+.dashboard-row .dashboard-panel:hover .ui-resizable-handle {
+  visibility: visible;
+}
+
+.dashboard-row .dashboard-panel .ui-resizable-handle {
+  margin-bottom: -1px;
+  position:absolute;
+}
+
+.dashboard-row .dashboard-panel .panel-element-row {
+  clear: both;
+}
+
+.dashboard-row .dashboard-panel .panel-element-row div.single {
+  float: left;
+  min-width: 200px;
+}
+
+.dashboard-row .dashboard-panel .panel-element-row .table {
+  margin-bottom: 0px;
+}
+
+.dashboard-row .dashboard-panel .panel-element-row .ui-resizable-handle {
+  display: none;
+}
+
+.dashboard-row .dashboard-panel .panel-element-row:hover .ui-resizable-handle {
+  display: block;
+}
+
+.dashboard-row .dashboard-panel .panel-title.empty + .fieldset.empty + .panel-element-row {
+  border-top:none;
+}
+
+.dashboard-row .dashboard-panel .dashboard-element {
+  position: relative;
+}
+
+.dashboard-row .dashboard-panel .dashboard-element .panel-footer {
+  clear: both;
+}
+
+.dashboard-row .dashboard-panel .panel-head h3 {
+  line-height: 1;
+  margin: 0;
+  padding: 12px 55px 10px 12px;
+  color: #333;
+  text-rendering: initial;
+  word-wrap: break-word;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.dashboard-row .dashboard-panel .panel-head h3 .untitled {
+  color: #999;
+}
+
+.dashboard-row .dashboard-panel .panel-footer {
+  clear: both;
+  height:0;
+  overflow:hidden;
+}
+
+.dashboard-row .dashboard-panel .panel-footer:before,
+    .dashboard-row .dashboard-panel .panel-footer:after {
+  display: table;
+  content: "";
+  /*  Fixes Opera/contenteditable bug: */
+  /*  http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952 */
+  line-height: 0;
+}
+
+.dashboard-row .dashboard-panel .panel-footer:after {
+  clear: both;
+}
+
+.dashboard-row .dashboard-panel .panel-footer.show, .dashboard-row .dashboard-panel .dashboard-element:hover .panel-footer {
+  box-sizing:border-box;
+  height:30px;
+  padding: 5px 15px 5px 12px;
+  border: 1px solid #fff;
+  border-top:none;
+  margin: 0 0 -30px 0;
+  background-color: rgba(224, 224, 224, 0.9);
+  position:relative;
+  z-index: 3;
+}
+
+.dashboard-row .dashboard-panel .view-results .inspector-link {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.dashboard-row .dashboard-panel .view-results .btn-pill {
+  padding: 0;
+  height: 20px;
+  line-height: 20px;
+  width: 22px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.dashboard-row .dashboard-panel .view-results .btn-pill + .btn-pill {
+  margin-left: 0;
+}
+
+.dashboard-row .dashboard-panel .panel-body {
+  overflow: hidden;
+  /* SPL-71571 */
+  clear: both;
+}
+
+.dashboard-row .dashboard-panel .panel-body.html, .dashboard-row .dashboard-panel .panel-body.splunk-html {
+  padding: 10px 10px;
+}
+
+.dashboard-row .dashboard-panel .panel-body.html p,
+        .dashboard-row .dashboard-panel .panel-body.html .splunk-radiogroup,
+        .dashboard-row .dashboard-panel .panel-body.html .splunk-dropdown,
+        .dashboard-row .dashboard-panel .panel-body.html .splunk-multidropdown,
+        .dashboard-row .dashboard-panel .panel-body.html .splunk-textinput,
+        .dashboard-row .dashboard-panel .panel-body.html .splunk-checkbox,
+        .dashboard-row .dashboard-panel .panel-body.html .splunk-checkboxgroup,
+        .dashboard-row .dashboard-panel .panel-body.html .splunk-timerange,
+        .dashboard-row .dashboard-panel .panel-body.splunk-html p,
+        .dashboard-row .dashboard-panel .panel-body.splunk-html .splunk-radiogroup,
+        .dashboard-row .dashboard-panel .panel-body.splunk-html .splunk-dropdown,
+        .dashboard-row .dashboard-panel .panel-body.splunk-html .splunk-multidropdown,
+        .dashboard-row .dashboard-panel .panel-body.splunk-html .splunk-textinput,
+        .dashboard-row .dashboard-panel .panel-body.splunk-html .splunk-checkbox,
+        .dashboard-row .dashboard-panel .panel-body.splunk-html .splunk-checkboxgroup,
+        .dashboard-row .dashboard-panel .panel-body.splunk-html .splunk-timerange {
+  padding: 0px;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-paginator {
+  float: right;
+  padding-right: 15px;
+  padding-top: 3px;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-paginator:empty {
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.dashboard-row .dashboard-panel .panel-body .table-row-expanding > tbody > tr > td.expands a,
+      .dashboard-row .dashboard-panel .panel-body .table-row-expanding th.col-info,
+      .dashboard-row .dashboard-panel .panel-body .results-table table tr>td:first-child,
+      .dashboard-row .dashboard-panel .panel-body .results-table table tr>th:first-child   {
+  padding-left: 12px;
+}
+
+.dashboard-row .dashboard-panel .panel-body .results-table table tr>td:last-child,
+      .dashboard-row .dashboard-panel .panel-body .results-table table tr>th:last-child,
+      .dashboard-row .dashboard-panel .panel-body .table th:last-child,
+      .dashboard-row .dashboard-panel .panel-body .table td:last-child {
+  padding-right: 12px;
+}
+
+.dashboard-row .dashboard-panel .panel-body .results-table table tr>th:last-child .btn-col-format {
+  margin-right: -12px;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-message-container .alert, .dashboard-row .dashboard-panel .panel-body .lazy-view-container.loading .alert, .dashboard-row .dashboard-panel .panel-body .visualization-message .alert {
+  text-align: center;
+  color: #999;
+  border-style: none;
+  font-size: 13px;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-message-container .alert.alert-info i, .dashboard-row .dashboard-panel .panel-body .lazy-view-container.loading .alert.alert-info i, .dashboard-row .dashboard-panel .panel-body .visualization-message .alert.alert-info i {
+  display: none;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-message-container .alert .icon-alert, .dashboard-row .dashboard-panel .panel-body .lazy-view-container.loading .alert .icon-alert, .dashboard-row .dashboard-panel .panel-body .visualization-message .alert .icon-alert {
+  float: none;
+  color: rgb(179, 179, 179);
+  position: static;
+  margin-right: 0.25em;
+  vertical-align: middle;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-message-container.compact .alert, .dashboard-row .dashboard-panel .panel-body .lazy-view-container.loading.compact .alert, .dashboard-row .dashboard-panel .panel-body .visualization-message.compact .alert {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  margin-bottom: 0;
+  text-align: left;
+  display: inline;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-message-container.compact .alert .icon-alert, .dashboard-row .dashboard-panel .panel-body .lazy-view-container.loading.compact .alert .icon-alert, .dashboard-row .dashboard-panel .panel-body .visualization-message.compact .alert .icon-alert {
+  font-size: 150%;
+  top: 4px;
+}
+
+.dashboard-row .dashboard-panel .panel-body .lazy-view-container.loading, .dashboard-row .dashboard-panel .panel-body .visualization-message {
+  padding-top: 54px;
+}
+
+/*  single value */
+
+.dashboard-row .dashboard-panel .panel-body .splunk-single {
+  min-height: 40px;
+  text-align: center;
+}
+
+.dashboard-row .dashboard-panel .panel-body .msg .single-result {
+  color: #999;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-table {
+  margin-top: 12px;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-table:before,
+    .dashboard-row .dashboard-panel .panel-body .splunk-table:after {
+  display: table;
+  content: "";
+  /*  Fixes Opera/contenteditable bug: */
+  /*  http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952 */
+  line-height: 0;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-table:after {
+  clear: both;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-table .splunk-paginator {
+  float: right;
+  padding-right: 15px;
+}
+
+.dashboard-row .dashboard-panel .panel-body p {
+  padding: 0px 10px;
+}
+
+.dashboard-row .dashboard-panel .panel-body .splunk-radiogroup,
+      .dashboard-row .dashboard-panel .panel-body .splunk-dropdown,
+      .dashboard-row .dashboard-panel .panel-body .splunk-multidropdown,
+      .dashboard-row .dashboard-panel .panel-body .splunk-textinput,
+      .dashboard-row .dashboard-panel .panel-body .splunk-checkbox,
+      .dashboard-row .dashboard-panel .panel-body .splunk-checkboxgroup,
+      .dashboard-row .dashboard-panel .panel-body > .splunk-timerange,
+      .dashboard-row .dashboard-panel .panel-body .splunk-searchbar,
+      .dashboard-row .dashboard-panel .panel-body > button {
+  margin: 5px 10px;
+}
+
+.dashboard-row .dashboard-panel .shared-eventsviewer {
+  border-left: none;
+}
+
+.dashboard-row .dashboard-panel ul.shared-eventsviewer {
+  margin-bottom: 5px;
+  border-top-style: none;
+}
+
+.dashboard-row .dashboard-panel .error-details {
+  display: block;
+  float: right;
+  padding: 9px 12px 5px 5px;
+}
+
+.dashboard-row .dashboard-panel .error-details i {
+  color: #f2b827;
+}
+
+.dashboard-row .dashboard-panel .error-details.severe i {
+  color: #d6563c;
+}
+
+.dashboard-row .dashboard-panel .error-details.severe .error-indicator:hover i {
+  color: rgb(217, 159, 13);
+}
+
+.dashboard-row .dashboard-panel .error-details.severe .error-indicator:hover i {
+  color: rgb(185, 64, 39);
+}
+
+.dashboard-row .dashboard-panel .error-details .error-indicator {
+  padding: 0;
+  height: 20px;
+  line-height: 20px;
+  width: 22px;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 3px;
+  margin-left: 3px;
+  display: block;
+}
+
+.dashboard-row .dashboard-panel .error-details .error-indicator:hover {
+  background-color: #f8f8f8;
+}
+
+.dashboard-row .dashboard-panel .error-details .error-indicator i {
+  font-size: 18px;
+}
+
+.dashboard-row .dashboard-panel .error-details li {
+  padding: 5px 10px 5px 25px;
+  position: relative;
+}
+
+.dashboard-row .dashboard-panel .error-details li:first-child {
+  border-top: none;
+}
+
+.dashboard-row .dashboard-panel .error-details li > i {
+  font-size: 18px;
+  position: absolute;
+  left: 3px;
+  top: 5px;
+}
+
+.dashboard-row .dashboard-panel .error-details li.warning > i {
+  color: #f2b827;
+}
+
+.dashboard-row .dashboard-panel .error-details li.error > i {
+  color: #d6563c;
+}
+
+.dashboard-row .dashboard-panel .progress-bar .progress-msg {
+  font-size: 11px;
+  color: #999;
+  display: inline-block;
+}
+
+.view-mode .refresh-time-indicator {
+  padding:0 10px;
+  z-index: 10;
+  height: 14px;
+}
+
+.view-mode .refresh-time-indicator .time-freshness {
+  font-size: 11px;
+  color: #999;
+  cursor: default;
+  padding: 0;
+  margin: 0;
+}
+
+.view-mode .with-title .fieldset.empty + .panel-element-row:not(.grouped) .error-details {
+  position: absolute;
+  top: -31px;
+  right: 0;
+}
+
+.view-mode .element-footer {
+  border-bottom: 1px solid transparent;
+}
+
+.view-mode .element-footer .menus {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: 1px solid #fff;
+  margin-top: -1px;
+  padding-left: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  z-index: 999;
+}
+
+.view-mode .element-footer .menus .btn-pill {
+  padding: 1px 5px 1px 5px;
+  border-radius: 0;
+  line-height: 22px;
+  font-size: 15px;
+}
+
+.view-mode .element-footer .menus .refresh-time-indicator {
+  display: inline;
+}
+
+.view-mode .dashboard-element:hover .element-footer {
+  border-bottom: 1px solid #ccc;
+}
+
+.view-mode .dashboard-element:hover .element-footer .menus {
+  display: block;
+}
+
+.view-mode .element-footer:hover {
+  border-bottom: 1px solid #ccc;
+}
+
+.view-mode .element-footer:hover .menus {
+  display: block;
+}
+
+.preview-body .element-footer {
+  display: none;
+}
+
+.edit-mode .element-footer {
+  display: none;
+}
+
+.edit-mode .refresh-time-indicator {
+  display: none;
+}
+
+.dashboard-cell.hidden, .dashboard-row.hidden {
+  display: none;
+}
+
+.edit-mode .dashboard-cell.hidden, .edit-mode .dashboard-row.hidden {
+  display: block;
+}
+
+.edit-mode .dashboard-cell.hidden .dashboard-panel, .edit-mode .dashboard-row.hidden .dashboard-panel {
+  border-style: dashed;
+}
+.dashboard-element.hidden {
+  display: none;
+}
+.edit-mode .dashboard-element.hidden {
+  display: block;
+}
+.edit-mode .dashboard-element.hidden .panel-body, .edit-mode .dashboard-element.hidden .panel-footer {
+  opacity: .5;
+}
+.edit-mode .dashboard-element.hidden .panel-head h3 {
+  color: #bbb;
+}
+.edit-mode .dashboard-element.hidden .panel-editor {
+  z-index: 99;
+}
+
+.dashboard-panel > .drag-handle {
+  height: 8px;
+  margin: 5px 5px 0px 5px;
+  cursor: move;
+  z-index: 3;
+}
+
+.dashboard-panel > .drag-handle .handle-inner {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2M0Njb+f/bsWUYYzciABuAyOFUAAKKMEAXhn6ySAAAAAElFTkSuQmCC) repeat;
+  opacity: 0.5;
+  cursor: move;
+  height: 8px;
+  margin-right: 14px;
+}
+
+.dashboard-panel > .drag-handle > .delete-panel {
+  display: inline-block;
+  float: right;
+  font-size: 17px;
+  padding: 0 3px;
+  color: #97999B;
+  margin-right: -3px;
+  margin-top: -4px;
+  background: #fff;
+}
+
+.dashboard-panel > .drag-handle > .delete-panel:hover, .dashboard-panel > .drag-handle > .delete-panel:focus {
+  text-decoration: none;
+  color: #3863a0;
+}
+
+.dashboard-panel > .drag-handle > .delete-panel:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-panel > .drag-handle > .delete-panel:focus {
+  outline: 0;
+  text-decoration: none;
+  background: rgba(61, 171, 255, 0.12);
+  box-shadow: none;
+  /* override default focus-link() */
+}
+
+.initial-placeholder {
+  height: 234px;
+}
+
+.initial-placeholder.placeholder-visualizations-singlevalue {
+  height: 80px;
+}
+
+.dragndrop-enabled .dashboard-row.empty {
+  min-height: 20px;
+}
+
+.dragndrop-enabled .dashboard-row .dashboard-panel.drag-hover {
+  border-color: rgb(187, 187, 187);
+}
+
+.dragndrop-enabled .dashboard-row .panel-head h3 {
+  padding: 11px 15px 8px 15px;
+}
+
+.dragndrop-enabled .dashboard-row .panel-element-row + .panel-element-row .panel-head {
+  border-top: 1px solid #ccc;
+}
+
+.dragndrop-enabled .dashboard-row .dashboard-panel .panel-body .splunk-message-container .alert .icon-alert {
+  color: #d6563c;
+}
+
+.dragndrop-enabled .sortable-placeholder {
+  min-width: 10px;
+  float: left;
+}
+
+.dragndrop-enabled .sortable-placeholder .dashboard-panel {
+  min-height: 200px;
+  background: transparent;
+  border: 1px dashed rgb(179, 179, 179);
+  box-shadow: none;
+}
+
+.dragndrop-enabled .dashboard-cell {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dragndrop-enabled .dashboard-cell.ui-sortable-helper .dashboard-panel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dragndrop-enabled .dashboard-row {
+  min-height: 100px;
+}
+
+.dragndrop-enabled .shared-eventsviewer .table-chrome {
+  border-top: none;
+}
+
+.html h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.html h2 {
+  font-size: 16px;
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+.html h3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.html h4 {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.html h5 {
+  font-size: 10.2px;
+}
+
+.html .panel-head > h3 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/*  SPL-65856 - workaround for time range picker in modal */
+.timerange > label {
+  color: #000;
+  float: left;
+  width: 160px;
+  padding-top: 5px;
+  text-align: right;
+}
+.timerange > .controls {
+  margin-left: 180px;
+}
+
+/*  even more ghetto we can't re-use the same selectors from above ;_; */
+.timerange > .control-group > label {
+  color: #000;
+  float: left;
+  width: 160px;
+  padding-top: 5px;
+  text-align: right;
+}
+.timerange > .control-group > .controls {
+  margin-left: 180px;
+}
+
+/*  Licensing tab content */
+.page-licensing .tab-content {
+  background-color: rgb(252, 252, 252);
+  /* Old browsers */
+  background-image: linear-gradient(to bottom, #fff 0, #eee 25px);
+  /* W3C */
+}
+
+.view-mode .dashboard-row .dashboard-cell:last-child .dashboard-panel,
+.view-mode .dashboard-row .dashboard-cell.last-visible .dashboard-panel {
+  margin-right: 0;
+}
+
+.dashboards-table-controls-convertdashboard .shared-controls-controlgroup .controls-halfblock .help-block {
+  width: 50%;
+  text-align: center;
+}
+
+.more-info {
+  width: 400px;
+}
+
+.more-info .popdown-dialog-body {
+  padding: 20px 20px 10px 20px;
+}
+
+/*  radio forms */
+.splunk-radiogroup .choice {
+  margin-bottom: 4px;
+}
+.splunk-radiogroup input {
+  margin: 0px 10px 0px 2px;
+}
+.splunk-radiogroup label {
+  display: inline-block;
+  margin-left: 1em;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.dropdown-menu .dashboard-source-type {
+  float: right;
+  color: #999;
+}
+
+/*  make search edit a bit taller with no limit */
+.edit-search-string .controls textarea,
+.add-panel-wrapper .controls textarea {
+  height: 15em;
+  max-height: none;
+}
+
+/*  input editor */
+/*  TODO: break out to component */
+.input-editor-body {
+  border-bottom: 1px solid #ccc;
+}
+/*  TODO: make this block, float, width, etc. */
+.input-editor-body .input-editor-type {
+  display: inline-block;
+  vertical-align: top;
+  list-style: none;
+  margin: 0;
+}
+.input-editor-body .input-editor-type li {
+  margin: 0;
+}
+/*  hover state */
+.input-editor-body .input-editor-type li > a:hover {
+  position: relative;
+  color: #3863a0;
+  background: rgba(0, 0, 0, 0.05);
+}
+.input-editor-body .input-editor-type li > a:focus {
+  position: relative;
+  outline: 0;
+  text-decoration: none;
+  background: rgba(61, 171, 255, 0.12);
+  box-shadow: none;
+  /* override default focus-link() */
+}
+.input-editor-body .input-editor-type li > a.selected {
+  position: relative;
+  color: #fff;
+  background: #3863a0;
+  border: none;
+}
+/*  link style */
+.input-editor-body .input-editor-type li > a {
+  /*  BS 2.2 scoping */
+  border-top: 1px dotted #ccc;
+  color: #1e93c6;
+  /*  first and last elements have rounded corners that should not be seen. */
+  /*  There should not be space between <a> and concertina-body so updating  */
+  /*  padding and margin-right below */
+  padding: 5px 16px;
+  /*  BS 2.2.x breaks this ... */
+  margin-right: -4px;
+  white-space: normal;
+  display: block;
+  /*  BS 2.3 breaks this */
+  text-decoration: none;
+}
+/*  rounding for first and last items */
+.input-editor-body .input-editor-type li:first-child > a {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top: none;
+}
+.input-editor-body .input-editor-type li:last-child > a {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.input-editor-body .input-editor-type [class^="icon-"], .input-editor-body .input-editor-type [class*=" icon-"] {
+  width: 1.25em;
+  text-align: center;
+}
+/*  .dropdown-menu */
+.input-editor-body .input-editor-format {
+  display: inline-block;
+  position: relative;
+  width: 385px;
+  border-left: 1px solid #ccc;
+  vertical-align: top;
+}
+.input-editor-body .input-editor-format .concertina .concertina-body {
+  position: static;
+  max-height: 500px;
+  min-height: 100px;
+}
+.input-editor-body .input-editor-format .splunk-choice-input-message {
+  height: auto;
+}
+.input-editor-body .input-editor-format .shared-controls-textcontrol input {
+  width: 186px;
+}
+.input-editor-body .input-editor-format .shared-controls-textareacontrol textarea {
+  width: 186px;
+}
+.input-editor-body .input-editor-format .splunk-dropdown, .input-editor-body .input-editor-format .splunk-multidropdown {
+  width: 186px;
+}
+.input-editor-body .input-editor-format .shared-controls-syntheticselectcontrol .link-label {
+  float: left;
+  width: 162px;
+  overflow: hidden;
+  text-align: left;
+}
+.input-editor-body .input-editor-format .token-input-settings-body .splunk-choice-input-message {
+  clear: both;
+}
+.input-editor-body .input-editor-format .token-input-settings-body .shared-timerangepicker {
+  margin-left: 0px;
+}
+.input-editor-body .input-editor-format .token-input-settings-body .splunkjs-mvc-simpleform-edit-tokenpreviewcontrol .shared-controls-labelcontrol {
+  width: 200px;
+}
+.input-editor-body .input-editor-format .token-input-settings-body .splunkjs-mvc-simpleform-edit-tokenpreviewcontrol .shared-controls-labelcontrol span {
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+.input-editor-body .input-editor-format .static-input-settings-body .static-options-heading {
+  margin-bottom: 8px;
+}
+.input-editor-body .input-editor-format .static-input-settings-body .static-options-heading .static-options-heading-name {
+  width: 114px;
+  margin-left: 40px;
+  float: left;
+}
+.input-editor-body .input-editor-format .static-input-settings-body .static-options-heading .static-options-heading-value {
+  margin-left: 180px;
+}
+.input-editor-body .input-editor-format .static-input-settings-body .static-options-body {
+  margin-bottom: 8px;
+}
+.input-editor-body .input-editor-format .static-input-settings-body .static-options-body .static-option-pair .drag-handle {
+  display: inline-block;
+  margin-left: 20px;
+  width: 10px;
+  height: 18px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAG0lEQVQIW2M0Njb+f/bsWUYYzciABuAyOFUAAKKMEAXhn6ySAAAAAElFTkSuQmCC) repeat;
+  opacity: 0.5;
+  cursor: move;
+}
+.input-editor-body .input-editor-format .static-input-settings-body .static-options-body .static-option-pair .static-option-label, .input-editor-body .input-editor-format .static-input-settings-body .static-options-body .static-option-pair .static-option-value {
+  display: inline-block;
+  margin-left: 5px;
+}
+.input-editor-body .input-editor-format .static-input-settings-body .static-options-body .static-option-pair .static-option-label input, .input-editor-body .input-editor-format .static-input-settings-body .static-options-body .static-option-pair .static-option-value input {
+  width: 100px;
+}
+.input-editor-body .input-editor-format .static-input-settings-body .static-options-body .static-option-pair .static-option-remove {
+  margin-left: 5px;
+}
+.input-editor-body .input-editor-format .static-input-settings-body .static-options-add {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+.input-editor-body .input-editor-format .dynamic-input-settings-body .splunk-timerange {
+  margin-bottom: 10px;
+}
+.input-editor-body .control-label {
+  width: 125px;
+  float: left;
+  padding-top: 5px;
+  text-align: right;
+}
+.input-editor-body .controls {
+  margin-left: 135px;
+}
+.input-editor-body .alert.alert-error {
+  margin-left: 20px;
+  margin-bottom: 0;
+}
+.input-editor-body .alerts.shared-flashmessages {
+  border-top: 1px solid #ccc;
+}
+
+.input-editor-cancel, .input-editor-apply {
+  margin: 10px;
+}
+
+.input-timerangepicker .shared-timerangepicker, .input-time .shared-timerangepicker {
+  width: 95%;
+}
+
+.input-timerangepicker .shared-timerangepicker .btn, .input-time .shared-timerangepicker .btn {
+  width: 95%;
+  text-align: left;
+}
+
+.input-timerangepicker .shared-timerangepicker .btn .time-label, .input-time .shared-timerangepicker .btn .time-label {
+  max-width: 90%;
+  display: inline-block;
+}
+
+.input-timerangepicker .shared-timerangepicker .caret, .input-time .shared-timerangepicker .caret {
+  float: right;
+}
+
+/*  Dashboard print styles */
+/*  -------------------------------------------------- */
+@media print {
+  #header, .edit-dashboard-menu, .select2-choice > div, .panel-footer, .form-submit, .ui-resizable-handle {
+    display: none !important;
+  }
+
+  .fieldset .input > label:first-child {
+    font-weight: bold;
+  }
+
+  .fieldset .input input, .fieldset .input .select2-choices, .fieldset .input .select2-container {
+    border: none;
+    box-shadow: none !important;
+    transition: none !important;
+  }
+
+  .select2-container {
+    min-width: 0px !important;
+  }
+
+  .select2-container a.select2-choice, .select2-container .select2-choices, .select2-container .select2-search-choice {
+    border-style: none !important;
+  }
+
+  .select2-search-choice {
+    padding-left: 2px !important;
+  }
+
+  .shared-timerangepicker .btn, .shared-timerangepicker .btn .time-label {
+    max-width: 200px !important;
+    width: 200px !important;
+    text-align: left;
+  }
+
+  .dashboard-element:not(.table):not(.event) {
+    page-break-inside: avoid;
+  }
+
+  .splunk-paginator a.selected {
+    font-weight: bold;
+  }
+}
+
+.content-preview {
+  box-sizing: border-box;
+  width: 450px;
+  height: 100%;
+}
+
+.content-preview .preview-body {
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  top: 65px;
+  bottom: 0;
+}
+
+.content-preview .preview-body .control-group {
+  clear: both;
+}
+
+.dashboard-list-item .accordion-group {
+  border: none;
+}
+
+.dashboard-panel {
+    transition: border-color 2s ease-out, box-shadow 2s ease-out, border-width 2s ease-out;
+}
+
+.panel-highlight .dashboard-panel {
+  border-color: #3863a0;
+  box-shadow: 0 0 10px 2px rgba(56, 99, 160, 0.4);
+}
+
+/*  Lite UI */
+
+.splunk-header {
+  min-height:20px;
+}

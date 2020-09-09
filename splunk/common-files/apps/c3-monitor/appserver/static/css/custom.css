@@ -1,0 +1,384 @@
+body {
+    line-height: 16px;
+    font-size: 12px;
+    font-family: "Roboto","Droid","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.btn {
+    background-image: linear-gradient(to bottom, #f5f5f5, #dcdcdc);
+    background-repeat: repeat-x;
+    background-color: #e9e9e9;
+    border: 1px solid #aeaeae;
+    border-top-color: #b7b7b7;
+    border-bottom-color: #989898;
+    color: #333333;
+    text-shadow: 0 1px 0 #ffffff;
+}
+
+.btn-small {
+    font-size: 11px;
+    padding: 2px 10px;
+}
+
+.app-bar {
+    height: 40px;
+    background-color: #1489B2 !important;
+}
+.app-bar .nav-item i {
+    font-size: 15px;
+    position: relative;
+    top: 1px;
+}
+
+[data-view="views/shared/appbar/Master"] {
+  background-color: #127bb2 !important;
+}
+
+h2 i {
+    color: #999999;
+}
+
+#query-dialog {
+    width: 550px;
+    display: none
+}
+#query-dialog textarea {
+    width: 98%;
+}
+#query-dialog .links {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#timerange-dialog {
+    width: 280px;
+    display: none
+}
+#timerange-dialog .status {
+    font-size: 12pt;
+}
+#timerange-dialog .status.good {
+    color: #6a6;
+}
+#timerange-dialog .status.bad {
+    color: #a66;
+}
+#timerange-dialog .status.active {
+    color: #666;
+}
+
+#search-assistant .modal-body {
+    height: 250px;
+    overflow: auto;
+}
+#search-assistant .shared-jobstatus {
+    margin: 0;
+}
+#search-assistant .shared-jobstatus-searchmode {
+    display: none;
+}
+#search-assistant table.hosts {
+    margin: 0;
+    margin-top: 3px;
+    width: 100%;
+    border-top: 1px solid #eee;
+}
+#search-assistant table.hosts th.name {
+    text-align: left;
+}
+#search-assistant table.hosts tr.role td.name {
+    padding-left: 16px;
+}
+#search-assistant table.hosts th.hosts, #search-assistant table.hosts td.hosts {
+    text-align: right;
+}
+#search-assistant table.hosts th.events, #search-assistant table.hosts td.events {
+    text-align: right;
+}
+
+.shared-searchbar .dropdown-menu {
+    border-radius: 8px;
+    min-width: 0px;
+    width: 125px;
+    margin-left: -70px;
+    margin-top: 1px;
+}
+.shared-timerangepicker a {
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+.shared-timerangepicker .caret {
+    padding-left: 5px;
+}
+.shared-jobstatus .btn-group.pull-right {
+    margin-left: 6px;
+}
+.shared-jobstatus-searchmode {
+    display: none;
+}
+#actions-table table {
+    margin-bottom: 6px;
+}
+.page-size {
+    font-size: 12px;
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.page-size > span {
+    color: #888;
+}
+.page-size .dropdown-menu {
+    min-width: 0px;
+    width: 50px;
+    margin-left: -30px;
+}
+
+.splunk-searchcontrols .shared-jobstatus {
+    height: 25px;
+}
+.splunk-searchcontrols .summary .search-progress {
+    font-style: italic;
+    margin-left: 4px;
+}
+.chart-title {
+    padding: 10px 0 0 20px;
+    font-size: 12pt;
+}
+
+#action-profile table .indent {
+    display: inline-block;
+    width: 20px;
+}
+#action-profile table tr.child td.name {
+    color: black;
+}
+#action-profile table tr.descendent {
+    display: none;
+}
+
+.table-striped {
+    margin-bottom: 0;
+}
+.table-striped > tbody > tr:nth-child(odd) > td.grouped {
+    background-color: #fffff5;
+}
+.table-striped > tbody > tr:nth-child(even) > td.grouped {
+    background-color: #efefe0;
+}
+.table-striped > tbody > tr.selected td {
+    background-color: #fdffe0 !important;
+}
+.splunk-paginator {
+    margin-bottom: 0;
+}
+
+.hosts-grid {
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    cell-spacing: 0;
+}
+.hosts-grid td {
+    padding: 0;
+    border: none;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    vertical-align: middle;
+}
+.hosts-grid td.tab {
+    padding: 0;
+    width: 25px;
+    max-width: 25px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 11pt;
+    border: none;
+}
+.hosts-grid td.tab div {
+    padding: 0;
+    padding-top: 2px;
+    display: inline-block;
+    height: 22px;
+    max-height: 22px;
+    width: 150px;
+    max-width: 150px;
+    overflow: hidden;
+    position: relative;
+    left: -60px;
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    white-space: nowrap;
+}
+.hosts-grid td.host {
+    position: relative;
+    background-color: white;
+}
+.hosts-grid td.role {
+    position: relative;
+    background-color: white;
+}
+.hosts-grid td:last-child {
+    border-right: none;
+}
+.hosts-grid td.empty {
+    border-right: none;
+}
+.hosts-grid a.info {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    font-size: 14pt;
+    z-index: 5;
+}
+.hosts-grid .chart-spinner {
+    position: absolute;
+    left: 20px;
+    top: 2px;
+    z-index: 9;
+}
+.hosts-grid .chart {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-flip-x {
+    display: inline-block;
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+}
+.icon-flip-y {
+    display: inline-block;
+    transform: scaleY(-1);
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+.spinner {
+    display: inline-block;
+    position: absolute;
+    z-index: 9;
+    font-size: 36pt;
+    color: #65a637;
+    opacity: 0.8;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 1500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 2000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 2000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    -o-transition: rotate(3600deg);
+}
+.modal {
+    display: none;
+}
+
+.search-bar-primary .search-assistant-activator {
+    position:static;
+    padding:0;
+}
+
+.search-assistant-wrapper .icon-triangle-down-small:before {
+    content: "\25BE";
+}
+
+.section-header {
+    padding-top: 10px;
+}
+
+.navbar .navbar-inner {
+    height: 25px;
+}
+
+.search-bar .search-button .btn, .search-bar-primary .search-button .btn {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.dashboard-body {
+    padding: 0;
+}
+
+.dropdown-menu li:first-child>a {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.dropdown-menu li:last-child>a {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.table-chrome {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+.table-chrome>thead>tr>th {
+    background-image: linear-gradient(to bottom, #f5f5f5, #dcdcdc);
+    border: 1px solid #aeaeae;
+    border-bottom-color: #989898;
+    text-shadow: 0 1px 0 #ffffff;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+#actions-table table {
+    margin-bottom: 6px;
+}
+
+.results-table#statistics > .table > tbody {
+    font-family: inherit;
+}
+
+.results-table table tr > th:first-child, .results-table table tr > td:first-child {
+    padding: 4px 8px 4px 20px;
+}
+
+td.search-timerange .btn {
+  border: 0;
+}
+
+td.search-timerange button {
+  background: none !important;
+  border: none !important;
+  color: #ffffff !important;
+  padding-bottom: 7px;
+}
+
+.section-header .section-title {
+  font-weight: 200;
+  margin-bottom: 0;
+}
+
+.summary.shared-jobstatus {
+  margin-top: -10px;
+}

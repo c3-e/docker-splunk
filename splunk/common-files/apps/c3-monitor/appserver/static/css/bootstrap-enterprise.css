@@ -1,0 +1,78 @@
+.search-bar .btn, .search-bar .btn.dropdown-toggle, .search-bar-primary .btn, .search-bar-primary .btn.dropdown-toggle {
+    border-radius: 0;
+    line-height: 28px;
+    height: 38px;
+    white-space: nowrap;
+    border-left: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.uneditable-input, input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
+    font-size: 12px;
+}
+
+.btn-combo, .btn-group {
+    font-size: 12px;
+}
+.btn-group .btn-pill, .btn-group .dropdown-toggle, .btn-group .popdown-dialog, .btn-group>.btn, .btn-group>.btn-large, .btn-group>.dropdown-menu, .btn-group>.popover, .btn-group ul {
+    font-size: 12px;
+}
+
+.btn-group>.btn-small, .btn-combo>.btn-small, .btn-group>.btn-mini, .btn-combo>.btn-mini {
+    font-size: 11px;
+}
+
+table {
+    border-color: grey;
+}
+
+.table th, .table td {
+    padding: 4px 8px;
+    line-height: 16px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #cccccc;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.table-striped>tbody>tr>td {
+    border-top: 1px solid rgb(204, 204, 204);
+}
+
+.splunk-paginator.splunk-view a {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: #5379af;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-decoration: none;
+    min-width: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.splunk-paginator .disabled, .splunk-paginator .selected {
+    color: #999;
+    cursor: default;
+}
+
+.splunk-paginator.splunk-view a.selected {
+    color: #999;
+    border: 1px solid transparent;
+    background: #eee;
+}
+
+.splunk-paginator.splunk-view a:hover {
+    background: #eee;
+    color: #333;
+}
+
+.shared-jobstatus {
+    margin: -10px 20px 10px 20px;
+}
