@@ -75,6 +75,9 @@ base-redhat-8:
 base-windows-2016:
 	docker build ${DOCKER_BUILD_FLAGS} -t base-windows-2016:${IMAGE_VERSION} ./base/windows-2016
 
+base-redhat-7:
+  docker build ${DOCKER_BUILD_FLAGS} --build-arg SCLOUD_URL=${SCLOUD_URL} --label version=${SPLUNK_VERSION} -t registry.c3.ai/splunk/base:${IMAGE_VERSION} ./base/redhat-7
+
 ##### Minimal images #####
 minimal: minimal-debian-9 minimal-debian-10 minimal-centos-7 minimal-redhat-8
 
@@ -83,21 +86,21 @@ minimal-debian-9: base-debian-9
 		-f splunk/common-files/Dockerfile \
 		--build-arg SPLUNK_BASE_IMAGE=base-debian-9 \
 		--build-arg SPLUNK_BUILD_URL=${SPLUNK_LINUX_BUILD_URL} \
-		--target minimal -t minimal-debian-9:${IMAGE_VERSION} .	
+		--target minimal -t minimal-debian-9:${IMAGE_VERSION} .
 
 minimal-debian-10: base-debian-10
 	docker build ${DOCKER_BUILD_FLAGS} \
 		-f splunk/common-files/Dockerfile \
 		--build-arg SPLUNK_BASE_IMAGE=base-debian-10 \
 		--build-arg SPLUNK_BUILD_URL=${SPLUNK_LINUX_BUILD_URL} \
-		--target minimal -t minimal-debian-10:${IMAGE_VERSION} .	
+		--target minimal -t minimal-debian-10:${IMAGE_VERSION} .
 
 minimal-centos-7: base-centos-7
 	docker build ${DOCKER_BUILD_FLAGS} \
 		-f splunk/common-files/Dockerfile \
 		--build-arg SPLUNK_BASE_IMAGE=base-centos-7 \
 		--build-arg SPLUNK_BUILD_URL=${SPLUNK_LINUX_BUILD_URL} \
-		--target minimal -t minimal-centos-7:${IMAGE_VERSION} .	
+		--target minimal -t minimal-centos-7:${IMAGE_VERSION} .
 
 minimal-redhat-8: base-redhat-8
 	docker build ${DOCKER_BUILD_FLAGS} \
@@ -114,21 +117,21 @@ bare-debian-9: base-debian-9
 		-f splunk/common-files/Dockerfile \
 		--build-arg SPLUNK_BASE_IMAGE=base-debian-9 \
 		--build-arg SPLUNK_BUILD_URL=${SPLUNK_LINUX_BUILD_URL} \
-		--target bare -t bare-debian-9:${IMAGE_VERSION} .	
+		--target bare -t bare-debian-9:${IMAGE_VERSION} .
 
 bare-debian-10: base-debian-10
 	docker build ${DOCKER_BUILD_FLAGS} \
 		-f splunk/common-files/Dockerfile \
 		--build-arg SPLUNK_BASE_IMAGE=base-debian-10 \
 		--build-arg SPLUNK_BUILD_URL=${SPLUNK_LINUX_BUILD_URL} \
-		--target bare -t bare-debian-10:${IMAGE_VERSION} .	
+		--target bare -t bare-debian-10:${IMAGE_VERSION} .
 
 bare-centos-7: base-centos-7
 	docker build ${DOCKER_BUILD_FLAGS} \
 		-f splunk/common-files/Dockerfile \
 		--build-arg SPLUNK_BASE_IMAGE=base-centos-7 \
 		--build-arg SPLUNK_BUILD_URL=${SPLUNK_LINUX_BUILD_URL} \
-		--target bare -t bare-centos-7:${IMAGE_VERSION} .	
+		--target bare -t bare-centos-7:${IMAGE_VERSION} .
 
 bare-redhat-8: base-redhat-8
 	docker build ${DOCKER_BUILD_FLAGS} \
@@ -138,7 +141,7 @@ bare-redhat-8: base-redhat-8
 		--target bare -t bare-redhat-8:${IMAGE_VERSION} .
 
 ##### Splunk images #####
-splunk: ansible splunk-debian-9 splunk-debian-10 splunk-centos-7 splunk-redhat-8
+splunk: ansible splunk-redhat-7
 
 splunk-debian-9: base-debian-9 ansible
 	docker build ${DOCKER_BUILD_FLAGS} \
@@ -174,6 +177,13 @@ splunk-windows-2016: base-windows-2016 ansible
 		--build-arg SPLUNK_BASE_IMAGE=base-windows-2016 \
 		--build-arg SPLUNK_BUILD_URL=${SPLUNK_WIN_BUILD_URL} \
 		-t splunk-windows-2016:${IMAGE_VERSION} .
+
+splunk-redhat-7: base-redhat-7 ansible
+	docker build ${DOCKER_BUILD_FLAGS} \
+		-f splunk/common-files/Dockerfile \
+		--build-arg SPLUNK_BASE_IMAGE=registry.c3.ai/splunk/base \
+		--build-arg SPLUNK_BUILD_URL=${SPLUNK_LINUX_BUILD_URL} \
+		-t splunk-redhat-7:${IMAGE_VERSION} .
 
 ##### UF images #####
 uf: ansible uf-debian-9 uf-debian-10 uf-centos-7 uf-redhat-8
@@ -289,7 +299,7 @@ sample-compose-up: sample-compose-down
 sample-compose-down:
 	docker-compose -f test_scenarios/${SPLUNK_COMPOSE} down --volumes --remove-orphans || true
 
-test: clean ansible test_setup all run_small_tests run_large_tests
+  test: clean ansible test_setup all run_small_tests run_large_tests
 
 run_small_tests: run_small_tests_centos7 run_small_tests_redhat8 run_small_tests_debian9 run_small_tests_debian10
 
